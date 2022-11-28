@@ -1,0 +1,82 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer:
+#
+# Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file.
+# Use at your own risk!
+# By using any of those examples you agree to this disclaimer.
+#
+
+name: cellpose_ia39
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - conda
+  - docutils
+  - pip
+  - wheel
+  - setuptools
+  - autopep8
+  - nb_conda_kernels
+  - pytest
+  - cudatoolkit=11
+  - cudnn
+  - pyopencl
+  - pycudadecon
+  - cupy
+  - pooch
+  - requests
+  - tqdm
+
+  - pip:
+      - czmodel[pytorch]>=5
+      - torch
+      - torchvision
+      - opencv-python
+      - onnxruntime
+      - cellpose
+      - napari[all]
+      - napari-czann-segment
+      - napari-aicsimageio
+      - napari-brightness-contrast
+      - napari-layer-details-display
+      - napari-skimage-regionprops
+      - napari-simpleitk-image-processing
+      - napari-plugin-search
+      - napari-ome-zarr
+      - pyclesperanto-prototype
+      - napari-pyclesperanto-assistant
+      - napari-accelerated-pixel-and-object-classification
+      - napari-lattice
+      #- napari-nD-annotator
+      #- napari-label-interpolator
+      - napari-crop
+      - napari-plugin-search
+      - cellpose-napari
+      - magicgui
+      - magic-class
+      - apeer-dev-kit
+      - apeer-ometiff-library
+      - aicsimageio[all]
+      - aicspylibczi
+      - pylibCZIrw
+      - cztile
+      - czitools
+      - matplotlib
+
+
+# Create an environment
+# mamba env create --file env_ia_cellpose_39.yml
+
+# Update an environment
+# mamba env update --name cellpose_ia39 --file env_ia_cellpose_39.yml --prune
+
+# Remove an environment
+# mamba remove --name cellpose_ia39 --all
+# mamba clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python

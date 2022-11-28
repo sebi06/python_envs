@@ -1,0 +1,3 @@
+"C:\ProgramData\Anaconda3\Library\bin\conda.bat" install --dry-run -p "C:\Program Files\Carl Zeiss\ZeissPython\Py20180516\env" pyqt
+
+conda install -p "C:\Program Files\Carl Zeiss\ZeissPython\Py20180516\env" XYZ

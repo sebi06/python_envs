@@ -1,0 +1,35 @@
+name: stardist
+channels:
+  - defaults
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  #- cudatoolkit=11
+  #- cudnn
+  - xmltodict
+  - nb_conda_kernels
+  - docutils
+  - wheel
+  - setuptools
+  - autopep8
+  - pytest
+  - pip:
+    - tensorflow
+    - csbdeep
+    - stardist
+    - silence-tensorflow
+    - scikit-image
+    - pylibCZIrw
+    - czitools
+    - apeer-dev-kit
+    - apeer-ometiff-library
+    - aicsimageio[all]
+    - aicspylibczi
+    - matplotlib
+    - tqdm
+    - pooch
+    - requests
+    - zarr
+

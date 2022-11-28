@@ -1,0 +1,72 @@
+# run: conda env create --file conda_env_napari_czmodel.yml
+name: napari_czmodel
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - conda
+  - docutils
+  - pip
+  - wheel
+  - numpy
+  - napari
+  - setuptools
+  - cudatoolkit=11
+  - cudnn
+  - pyopencl
+  - cupy
+  - autopep8
+  - nb_conda_kernels
+
+  - pip:
+      - onnxruntime-gpu
+      - czmodel
+      - pylibczirw
+      - cztile
+      - livelossplot
+      - napari[all]
+      - aicsimageio[all]
+      - aicspylibczi
+      - pyclesperanto-prototype
+      - napari-pyclesperanto-assistant
+      - napari-cupy-image-processing
+      - napari-aicsimageio
+      - napari-brightness-contrast
+      - napari-accelerated-pixel-and-object-classification
+      - napari-layer-details-display
+      - napari-skimage-regionprops
+      - napari-simpleitk-image-processing
+      - napari-nD-annotator
+      - napari-label-interpolator
+      - napari-crop
+      - napari-ome-zarr
+      - napari-plugin-search
+      - magicgui
+      - magic-class
+      - apeer-dev-kit
+      - apeer-ometiff-library
+      - xmltodict
+      - seaborn
+      - pydash
+      - tqdm
+      - lxml
+      - keyring
+      - artifacts-keyring
+      - imagecodecs
+      - ipytree
+
+
+# Create an environmemt
+# conda env create --file conda_env_napari_czmodel.yml
+
+# Update an environment
+# conda env update --name napari_czmodel --file conda_env_napari_czmodel.yml --prune
+
+# Remove an environment
+# conda remove --name napari_czmodel --all
+# conda clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python
