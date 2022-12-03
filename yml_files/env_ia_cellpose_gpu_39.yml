@@ -1,17 +1,14 @@
 # Tested on Windows only but should also work for Linux.
 #
-# Disclaimer:
-#
-# Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file.
-# Use at your own risk!
-# By using any of those examples you agree to this disclaimer.
+# Disclaimer: Use at your own risk!
 #
 
 name: cellpose_gpu
 channels:
-  - pytorch 
-  - defaults
-  - conda-forge
+  - pytorch
+  - nvidia
+  #- defaults
+  #conda- conda-forge
 dependencies:
   - python=3.9
   - conda
@@ -23,11 +20,12 @@ dependencies:
   - nb_conda_kernels
   - pytest
   - pytorch
-  - cudatoolkit=11.3
-  - cudnn
-  - pyopencl
-  - pycudadecon
-  - cupy
+  #- pytorch-cuda=11.7
+  - cudatoolkit=11.6
+  #- cudnn
+  #- pyopencl
+  #- pycudadecon
+  #- cupy
   - pooch
   - requests
   - tqdm
@@ -38,25 +36,6 @@ dependencies:
       #- torchvision
       - opencv-python
       - onnxruntime
-      - cellpose[gui]
-      - napari[all]
-      - napari-czann-segment
-      - napari-aicsimageio
-      - napari-brightness-contrast
-      - napari-layer-details-display
-      - napari-skimage-regionprops
-      - napari-simpleitk-image-processing
-      - napari-plugin-search
-      - napari-ome-zarr
-      - pyclesperanto-prototype
-      - napari-pyclesperanto-assistant
-      - napari-accelerated-pixel-and-object-classification
-      - napari-lattice
-      #- napari-nD-annotator
-      #- napari-label-interpolator
-      - napari-crop
-      - napari-plugin-search
-      - cellpose-napari
       - magicgui
       - magic-class
       - apeer-dev-kit
@@ -67,13 +46,36 @@ dependencies:
       - cztile
       - czitools
       - matplotlib
+      - mightymosaic
+      - ome-zarr
+      - cellpose[gui]
+      - napari[all]
+      - napari-czann-segment
+      - napari-aicsimageio
+      - napari-brightness-contrast
+      - napari-layer-details-display
+      - napari-skimage-regionprops
+      - napari-simpleitk-image-processing
+      - napari-plugin-search
+      - napari-ome-zarr
+      #- pyclesperanto-prototype
+      #- napari-pyclesperanto-assistant
+      #- napari-accelerated-pixel-and-object-classification
+      #- napari-lattice
+      #- napari-nD-annotator
+      #- napari-label-interpolator
+      - napari-crop
+      - napari-plugin-search
+      #- cellpose-napari
+
+      
 
 
 # Create an environment
 # mamba env create --file env_ia_cellpose_gpu_39.yml
 
 # Update an environment
-# mamba env update --name cellpose_gpu --file env_ia_cellpose_39_gpu.yml --prune
+# mamba env update --name cellpose_gpu --file env_ia_cellpose_gpu_39.yml --prune
 
 # Remove an environment
 # mamba remove --name cellpose_gpu --all
