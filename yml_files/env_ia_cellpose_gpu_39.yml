@@ -7,8 +7,9 @@
 # By using any of those examples you agree to this disclaimer.
 #
 
-name: cellpose_ia39
+name: cellpose_gpu
 channels:
+  - pytorch 
   - defaults
   - conda-forge
 dependencies:
@@ -21,7 +22,8 @@ dependencies:
   - autopep8
   - nb_conda_kernels
   - pytest
-  - cudatoolkit=11
+  - pytorch
+  - cudatoolkit=11.3
   - cudnn
   - pyopencl
   - pycudadecon
@@ -32,11 +34,11 @@ dependencies:
 
   - pip:
       - czmodel[pytorch]>=5
-      - torch
-      - torchvision
+      #- torch
+      #- torchvision
       - opencv-python
       - onnxruntime
-      - cellpose
+      - cellpose[gui]
       - napari[all]
       - napari-czann-segment
       - napari-aicsimageio
@@ -68,13 +70,13 @@ dependencies:
 
 
 # Create an environment
-# mamba env create --file env_ia_cellpose_39.yml
+# mamba env create --file env_ia_cellpose_gpu_39.yml
 
 # Update an environment
-# mamba env update --name cellpose_ia39 --file env_ia_cellpose_39.yml --prune
+# mamba env update --name cellpose_gpu --file env_ia_cellpose_39_gpu.yml --prune
 
 # Remove an environment
-# mamba remove --name cellpose_ia39 --all
+# mamba remove --name cellpose_gpu --all
 # mamba clean --all
 
 # Show the locations of all versions of Python that are currently in the path
