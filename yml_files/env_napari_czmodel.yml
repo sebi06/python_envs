@@ -55,6 +55,9 @@ dependencies:
       - lxml
       - imagecodecs
       - ipytree
+      - python-box
+      - dacite
+      - chili
 
 # Create an environmemt
 # conda env create --file env_napari_czmodel.yml
