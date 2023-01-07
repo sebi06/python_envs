@@ -20,6 +20,9 @@ dependencies:
   - cupy
   - autopep8
   - nb_conda_kernels
+  - ocl-icd-system
+  - oclgrind # for windows
+  #- pocl # for Linux
 
   - pip:
       - onnxruntime-gpu
