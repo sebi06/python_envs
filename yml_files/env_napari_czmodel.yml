@@ -20,7 +20,6 @@ dependencies:
   - cupy
   - autopep8
   - nb_conda_kernels
-  - pytest
   - ocl-icd-system
   - oclgrind # for windows
   #- pocl # for Linux
@@ -49,6 +48,7 @@ dependencies:
       - napari-ome-zarr
       - napari-plugin-search
       - magicgui
+      - stackview
       - magic-class
       - apeer-dev-kit
       - apeer-ometiff-library
@@ -59,7 +59,9 @@ dependencies:
       - lxml
       - imagecodecs
       - ipytree
+      - pytest
       - python-box
+      - prodict
       - dacite
       - chili
 
