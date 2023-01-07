@@ -20,6 +20,7 @@ dependencies:
   - cupy
   - autopep8
   - nb_conda_kernels
+  - pytest
   - ocl-icd-system
   - oclgrind # for windows
   #- pocl # for Linux
