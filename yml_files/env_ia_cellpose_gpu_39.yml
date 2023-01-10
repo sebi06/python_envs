@@ -7,8 +7,6 @@ name: cellpose_gpu
 channels:
   - pytorch
   - nvidia
-  #- defaults
-  #conda- conda-forge
 dependencies:
   - python=3.9
   - conda
@@ -20,12 +18,7 @@ dependencies:
   - nb_conda_kernels
   - pytest
   - pytorch
-  #- pytorch-cuda=11.7
   - cudatoolkit=11.6
-  #- cudnn
-  #- pyopencl
-  #- pycudadecon
-  #- cupy
   - pooch
   - requests
   - tqdm
@@ -34,7 +27,7 @@ dependencies:
       - czmodel[pytorch]>=5
       #- torch
       #- torchvision
-      - opencv-python
+      - opencv-python-headless
       - onnxruntime
       - magicgui
       - magic-class
@@ -58,20 +51,10 @@ dependencies:
       - napari-simpleitk-image-processing
       - napari-plugin-search
       - napari-ome-zarr
-      #- pyclesperanto-prototype
-      #- napari-pyclesperanto-assistant
-      #- napari-accelerated-pixel-and-object-classification
-      #- napari-lattice
-      #- napari-nD-annotator
-      #- napari-label-interpolator
       - napari-crop
       - napari-plugin-search
-      #- cellpose-napari
 
-      
-
-
-# Create an environment
+# Create an environment - use conda or mamba
 # mamba env create --file env_ia_cellpose_gpu_39.yml
 
 # Update an environment

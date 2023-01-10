@@ -45,8 +45,8 @@ dependencies:
     - requests
     - ipytree
 
-# mamba env create -f stardist_local_GPU.yml
-# mamba env update --name stardist_gpu --file stardist_local_GPU.yml --prune
+# mamba env create -f env_stardist_GPU.yml
+# mamba env update --name stardist_gpu --file env_stardist_GPU.yml --prune
 
 # verfify CUDA
 # nvcc --version
