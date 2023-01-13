@@ -19,7 +19,7 @@ dependencies:
   - nb_conda_kernels
   - pytest
   - pip:
-    - tensorflow
+    - tensorflow-gpu
     - csbdeep
     - stardist
     - silence-tensorflow
@@ -56,7 +56,7 @@ dependencies:
 # nvidia-smi
 
 # Remove an environment
-# mamba remove --name stardist_gpu --all
+# e
 # mamba clean --all
 
 # Show the locations of all versions of Python that are currently in the path
