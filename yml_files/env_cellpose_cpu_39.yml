@@ -2,9 +2,12 @@
 #
 
 name: cellpose_cpu
+
 channels:
   - pytorch
   - nvidia
+  - conda-forge
+
 dependencies:
   - python=3.9
   - conda
@@ -13,6 +16,8 @@ dependencies:
   - wheel
   - setuptools
   - autopep8
+  - jupyter
+  - jupyterlab
   - nb_conda_kernels
   - pytest
   - debugpy

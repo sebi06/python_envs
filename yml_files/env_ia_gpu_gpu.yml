@@ -2,7 +2,6 @@
 
 name: ia39_gpu
 channels:
-  - defaults
   - nvidia
   - conda-forge
 dependencies:
@@ -13,6 +12,8 @@ dependencies:
   - wheel
   - setuptools
   - autopep8
+  - jupyter
+  - jupyterlab
   - nb_conda_kernels
   - pytest
   - numpy
@@ -43,6 +44,7 @@ dependencies:
       - napari-crop
       - napari-plugin-search
       - magicgui
+      - nbvv
       - magic-class
       - aicsimageio[all]
       - aicspylibczi
@@ -56,6 +58,7 @@ dependencies:
       - requests
       - tifffile
       - ipytree
+      - ipyfilechooser
       
 
 # Create an environment

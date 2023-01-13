@@ -1,10 +1,11 @@
 # Disclaimer: Use at your own risk!
 
 name: napari_czmodel
+
 channels:
-  - defaults
-  - nvidia
   - conda-forge
+  - nvidia
+
 dependencies:
   - python=3.9
   - conda
@@ -12,7 +13,8 @@ dependencies:
   - pip
   - wheel
   - numpy
-  - napari
+  - jupyter
+  - jupyterlab
   - setuptools
   - cudatoolkit=11
   - cudnn
@@ -47,6 +49,7 @@ dependencies:
       - napari-crop
       - napari-ome-zarr
       - napari-plugin-search
+      - nbvv
       - magicgui
       - stackview
       - magic-class

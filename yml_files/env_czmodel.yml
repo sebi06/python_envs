@@ -11,6 +11,8 @@ dependencies:
   - matplotlib
   - nb_conda
   - nb_conda_kernels
+  - jupyter
+  - jupyterlab
   - cudatoolkit=11
   - cudnn
   - scikit-learn

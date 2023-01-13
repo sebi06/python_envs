@@ -14,6 +14,8 @@ dependencies:
   - wheel
   - setuptools
   - autopep8
+  - jupyter
+  - jupyterlab
   - nb_conda_kernels
   - pytest
   - pip:
@@ -38,6 +40,7 @@ dependencies:
     - napari-ome-zarr
     - napari-assistant
     - magicgui
+    - nbvv
     - magic-class
     - matplotlib
     - tqdm
