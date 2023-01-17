@@ -4,6 +4,7 @@ name: ia39
 
 channels:
   - conda-forge
+  - pytorch
   - nvidia
 
 dependencies:
@@ -20,26 +21,33 @@ dependencies:
   - jupyter
   - jupyterlab
   - progressbar2
-  - cudatoolkit=11
+  - pytorch
+  - cudatoolkit=11.6
   - cudnn
   - pyopencl
   - cupy
   - pooch
   - requests
-  - keyring
-  - artifacts-keyring
   - tqdm
   - lxml
   - pytest
-  - ocl-icd-system
-  - oclgrind # for windows
-  #- pocl # for Linux
+  #- ocl-icd-system # sometime for linux users
+  #- oclgrind # for windows if no OpenCL compatible GPU is available
+  #- pocl # for Linux if no OpenCL compatible GPU is available
 
   - pip:
+      - keyring
+      - artifacts-keyring
+      - tensorflow-gpu
+      - csbdeep
+      - stardist
+      - silence-tensorflow
       - czmodel[pytorch]>=5
       - torchvision
-      - opencv-python
+      - opencv-python-headless
+      #- opencv-python
       - onnxruntime
+      - cellpose[gui]
       - napari[all]
       - napari-czann-segment
       - napari-aicsimageio
@@ -49,7 +57,6 @@ dependencies:
       - napari-simpleitk-image-processing
       - napari-plugin-search
       - napari-ome-zarr
-      - pyclesperanto-prototype
       - pyclesperanto-prototype
       - napari-pyclesperanto-assistant
       - napari-cupy-image-processing
