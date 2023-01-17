@@ -1,12 +1,9 @@
 # Disclaimer: Use at your own risk.
 
-name: ia39
-
+name: ia39_gpu
 channels:
-  - defaults
-  - conda-forge
   - nvidia
-
+  - conda-forge
 dependencies:
   - python=3.9
   - conda
@@ -15,27 +12,24 @@ dependencies:
   - wheel
   - setuptools
   - autopep8
+  - jupyter
+  - jupyterlab
   - nb_conda_kernels
   - pytest
   - numpy
-  - jupyter
-  - jupyterlab
-  - progressbar2
   - cudatoolkit=11
   - cudnn
   - pyopencl
   - cupy
-  - pooch
-  - requests
-  - keyring
-  - artifacts-keyring
-  - tqdm
+  - ocl-icd-system
+  - oclgrind # for windows
+  #- pocl # for Linux
 
   - pip:
       - czmodel[pytorch]>=5
       - torchvision
       - opencv-python
-      - onnxruntime
+      - onnxruntime-gpu
       - napari[all]
       - napari-czann-segment
       - napari-aicsimageio
@@ -53,22 +47,28 @@ dependencies:
       - napari-crop
       - napari-plugin-search
       - magicgui
+      - nbvv
       - magic-class
-      - apeer-dev-kit
-      - apeer-ometiff-library
       - aicsimageio[all]
       - aicspylibczi
       - pylibCZIrw
       - cztile
       - czitools
       - matplotlib
+      - tqdm
+      - scikit-image
+      - pooch
+      - requests
+      - tifffile
+      - ipytree
       - ipyfilechooser
+      
 
 # Create an environment
-# mamba env create --file env_ia39.yml
+# mamba env create --file env_ia_gpu_gpu.yml
 
 # Update an environment
-# mamba env update --name ia39 --file env_ia39.yml --prune
+# mamba env update --name ia39 --file env_ia_gpu_gpu.yml --prune
 
 # Remove an environment
 # mamba remove --name ia39 --all
