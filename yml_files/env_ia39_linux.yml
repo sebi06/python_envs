@@ -1,0 +1,101 @@
+# Disclaimer: Use at your own risk.
+
+name: ia39
+
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+
+dependencies:
+  - python=3.9
+  - conda
+  - docutils
+  - pip
+  - wheel
+  - setuptools
+  - autopep8
+  - nb_conda_kernels
+  - pytest
+  - numpy
+  - jupyter
+  - jupyterlab
+  - progressbar2
+  - pytorch
+  - cudatoolkit=11.6
+  - cudnn
+  - pyopencl
+  - cupy
+  - pooch
+  - requests
+  - tqdm
+  - lxml
+  - pytest
+  - ocl-icd-system # sometime for linux users
+  - pocl # for Linux if no OpenCL compatible GPU is available
+
+  - pip:
+      - keyring
+      - artifacts-keyring
+      - tensorflow-gpu
+      - csbdeep
+      - stardist
+      - silence-tensorflow
+      - czmodel[pytorch]>=5
+      - torchvision
+      - opencv-python-headless
+      #- opencv-python
+      - onnxruntime
+      - cellpose[gui]
+      - napari[all]
+      - napari-czann-segment
+      - napari-aicsimageio
+      - napari-brightness-contrast
+      - napari-layer-details-display
+      - napari-skimage-regionprops
+      - napari-simpleitk-image-processing
+      - napari-plugin-search
+      - napari-ome-zarr
+      - pyclesperanto-prototype
+      - napari-pyclesperanto-assistant
+      - napari-cupy-image-processing
+      - napari-accelerated-pixel-and-object-classification
+      - napari-label-interpolator
+      - napari-crop
+      - napari-plugin-search
+      - nbvv
+      - stackview
+      - magicgui
+      - magic-class
+      - apeer-dev-kit
+      - apeer-ometiff-library
+      - aicsimageio[all]
+      - aicspylibczi
+      - pylibCZIrw
+      - cztile
+      - czitools
+      - matplotlib
+      - seaborn
+      - ipyfilechooser
+      - python-box
+      - prodict
+      - dacite
+      - chili
+
+# Create an environment
+# mamba env create --file env_ia39_linux.yml
+
+# Update an environment
+# mamba env update --name ia39 --file env_ia39_linux.yml --prune
+
+# Remove an environment
+# mamba remove --name ia39 --all
+# mamba clean --all
+
+# verfify CUDA
+# nvcc --version
+# nvidia-smi
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python
