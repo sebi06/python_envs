@@ -15,8 +15,9 @@ dependencies:
   - wheel
   - setuptools
   - autopep8
-  - jupyter
-  - jupyterlab
+  - jupyter # might not be needed if inside base env
+  - jupyterlab # might not be needed if inside base env
+  - ipykernel
   - nb_conda_kernels
   - pytest
   - pytorch
