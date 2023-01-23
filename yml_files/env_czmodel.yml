@@ -7,12 +7,12 @@ dependencies:
   - python=3.9
   - conda
   - pip
-  - jupyter
   - matplotlib
   - nb_conda
   - nb_conda_kernels
-  - jupyter
-  - jupyterlab
+  - jupyter # might not be needed if inside base env
+  - jupyterlab # might not be needed if inside base env
+  - ipykernel
   - cudatoolkit=11
   - cudnn
   - scikit-learn
