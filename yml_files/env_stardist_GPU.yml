@@ -7,14 +7,15 @@ dependencies:
   - pip
   - cudatoolkit=11
   - cudnn
-  - jupyter
   - xmltodict
   - nb_conda_kernels
   - docutils
   - wheel
   - setuptools
   - autopep8
-  - jupyter
+  - jupyter # might not be needed if inside base env
+  - jupyterlab # might not be needed if inside base env
+  - ipykernel
   - jupyterlab
   - nb_conda_kernels
   - pytest
