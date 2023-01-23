@@ -13,8 +13,9 @@ dependencies:
   - pip
   - wheel
   - numpy
-  - jupyter
-  - jupyterlab
+  - jupyter # might not be needed if inside base env
+  - jupyterlab # might not be needed if inside base env
+  - ipykernel
   - setuptools
   - cudatoolkit=11
   - cudnn
