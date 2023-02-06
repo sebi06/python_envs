@@ -38,7 +38,7 @@ dependencies:
   - pip:
       - keyring
       - artifacts-keyring
-      - tensorflow-gpu
+      - tensorflow
       - csbdeep
       - stardist
       - silence-tensorflow
@@ -69,7 +69,7 @@ dependencies:
       - magicgui
       - magic-class
       - apeer-dev-kit
-      - apeer-ometiff-library
+      #- apeer-ometiff-library
       - aicsimageio[all]
       - aicspylibczi
       - pylibCZIrw
@@ -84,14 +84,14 @@ dependencies:
       - chili
 
 # Create an environment
-# mamba env create --file env_ia39.yml
+# conda env create --file env_ia39.yml
 
 # Update an environment
-# mamba env update --name ia39 --file env_ia39.yml --prune
+# conda env update --name ia39 --file env_ia39.yml --prune
 
 # Remove an environment
-# mamba remove --name ia39 --all
-# mamba clean --all
+# conda remove --name ia39 --all
+# conda clean --all
 
 # verfify CUDA
 # nvcc --version
