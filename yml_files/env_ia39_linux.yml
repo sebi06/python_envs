@@ -32,14 +32,13 @@ dependencies:
   - tqdm
   - lxml
   - pytest
-  #- ocl-icd-system # sometime for linux users
-  #- oclgrind # for windows if no OpenCL compatible GPU is available
-  #- pocl # for Linux if no OpenCL compatible GPU is available
+  - ocl-icd-system # sometime for linux users
+  - pocl # for Linux if no OpenCL compatible GPU is available
 
   - pip:
       - keyring
       - artifacts-keyring
-      - tensorflow
+      - tensorflow-gpu
       - csbdeep
       - stardist
       - silence-tensorflow
@@ -70,7 +69,7 @@ dependencies:
       - magicgui
       - magic-class
       - apeer-dev-kit
-      #- apeer-ometiff-library
+      - apeer-ometiff-library
       - aicsimageio[all]
       - aicspylibczi
       - pylibCZIrw
@@ -85,14 +84,14 @@ dependencies:
       - chili
 
 # Create an environment
-# conda env create --file env_ia39.yml
+# mamba env create --file env_ia39_linux.yml
 
 # Update an environment
-# conda env update --name ia39 --file env_ia39.yml --prune
+# mamba env update --name ia39 --file env_ia39_linux.yml --prune
 
 # Remove an environment
-# conda remove --name ia39 --all
-# conda clean --all
+# mamba remove --name ia39 --all
+# mamba clean --all
 
 # verfify CUDA
 # nvcc --version
