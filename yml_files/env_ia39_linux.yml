@@ -6,10 +6,13 @@ channels:
   - conda-forge
   - pytorch
   - nvidia
+  - fastai
 
 dependencies:
   - python=3.9
-  - conda
+  - napari[all]
+  - devbio-napari
+  - mamba
   - docutils
   - pip
   - wheel
@@ -18,13 +21,25 @@ dependencies:
   - nb_conda_kernels
   - pytest
   - numpy
-  - jupyter # might not be needed if inside base env
-  - jupyterlab # might not be needed if inside base env
+  - numba
+  - zarr
+  - ome-zarr
+  - onnxruntime
+  - tifffile
+  - aicsimageio[all]
+  - matplotlib
+  - seaborn
+  - jupyter
+  - jupyterlab
   - ipykernel
+  - nbconvert
+  - mistune=0.8.4
   - progressbar2
+  - tensorflow-gpu
   - pytorch
-  - cudatoolkit=11.6
-  - cudnn
+  - torchvision
+  #- cudatoolkit=11.8
+  #- cudnn
   - pyopencl
   - cupy
   - pooch
@@ -32,56 +47,29 @@ dependencies:
   - tqdm
   - lxml
   - pytest
-  - ocl-icd-system # sometime for linux users
+  - ocl-icd-system # sometimes for linux users
   - pocl # for Linux if no OpenCL compatible GPU is available
+  - python-box
+  - ipyfilechooser
+  - napari-aicsimageio
+  - napari-ome-zarr
+  - csbdeep
+  - stardist
+  - silence-tensorflow
+  - opencv-python-headless
+  - stackview
+  - magic-class
 
   - pip:
-      - keyring
-      - artifacts-keyring
-      - tensorflow-gpu
-      - csbdeep
-      - stardist
-      - silence-tensorflow
       - czmodel[pytorch]>=5
-      - torchvision
-      - opencv-python-headless
-      #- opencv-python
-      - onnxruntime
-      - cellpose[gui]
-      - napari[all]
-      - napari-czann-segment
-      - napari-aicsimageio
-      - napari-brightness-contrast
-      - napari-layer-details-display
-      - napari-skimage-regionprops
-      - napari-simpleitk-image-processing
-      - napari-plugin-search
-      - napari-ome-zarr
-      - pyclesperanto-prototype
-      - napari-pyclesperanto-assistant
-      - napari-cupy-image-processing
-      - napari-accelerated-pixel-and-object-classification
-      - napari-label-interpolator
-      - napari-crop
-      - napari-plugin-search
       - nbvv
-      - stackview
-      - magicgui
-      - magic-class
       - apeer-dev-kit
-      - apeer-ometiff-library
-      - aicsimageio[all]
       - aicspylibczi
       - pylibCZIrw
       - cztile
       - czitools
-      - matplotlib
-      - seaborn
-      - ipyfilechooser
-      - python-box
-      - prodict
-      - dacite
-      - chili
+      - napari-czann-segment
+      - cellpose[gui]
 
 # Create an environment
 # mamba env create --file env_ia39_linux.yml
