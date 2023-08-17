@@ -1,0 +1,80 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer: Use at your own risk!
+#
+
+name: cp_sd_gpu39
+channels:
+  #- pytorch
+  #- nvidia
+  - conda-forge
+dependencies:
+  - python=3.9
+  - conda
+  - docutils
+  - pip
+  - wheel
+  - setuptools
+  - autopep8
+  #- jupyter # might not be needed if inside base env
+  #- jupyterlab # might not be needed if inside base env
+  #- ipykernel
+  #- nb_conda_kernels
+  - pytest
+  - pooch
+  - requests
+  - tqdm
+  #- cudnn
+  #- tensorflow
+
+  - pip:
+    - --extra-index-url https://download.pytorch.org/whl/cu113
+    - torch==1.12.1+cu113
+    - tensorflow==2.9.1
+    # ---------- works locally
+    #- --extra-index-url https://download.pytorch.org/whl/cu117
+    #- torch==1.13.1+cu117
+    #- tensorflow==2.8.4
+    - csbdeep
+    - stardist
+    - opencv-python-headless
+    #- onnxruntime
+    #- magicgui
+    #- magic-class
+    - apeer-dev-kit
+    - apeer-ometiff-library
+    - aicsimageio[all]
+    - aicspylibczi
+    - pylibCZIrw
+    - cztile
+    - czitools
+    #- nbvv
+    #- matplotlib
+    #- mightymosaic
+    #- ome-zarr
+    - cellpose[gui]
+    #- napari[all]
+    #- napari-czann-segment
+    #- napari-aicsimageio
+    #- napari-brightness-contrast
+    #- napari-layer-details-display
+    #- napari-skimage-regionprops
+    #- napari-simpleitk-image-processing
+    #- napari-plugin-search
+    #- napari-ome-zarr
+    #- napari-crop
+    #- napari-plugin-search
+
+# Create an environment - use conda or mamba
+# conda env create --file cp_sd_gpu39.yml
+
+# Update an environment
+# conda env update --name cp_sd_gpu39 --file cellpose_gpu39.yml --prune
+
+# Remove an environment
+# conda remove --name cp_sd_gpu39 --all
+# conda clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python

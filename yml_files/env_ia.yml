@@ -1,6 +1,6 @@
 # Disclaimer: Use at your own risk.
 
-name: ia39
+name: ia
 
 channels:
   - conda-forge
@@ -65,6 +65,7 @@ dependencies:
       - napari-label-interpolator
       - napari-crop
       - napari-plugin-search
+      - ome-zarr
       - nbvv
       - stackview
       - magicgui
@@ -86,13 +87,13 @@ dependencies:
       - dataclasses-json
 
 # Create an environment
-# conda env create --file env_ia39.yml
+# conda env create --file env_ia.yml
 
 # Update an environment
-# conda env update --name ia39 --file env_ia39.yml --prune
+# conda env update --name ia --file env_ia.yml --prune
 
 # Remove an environment
-# conda remove --name ia39 --all
+# conda remove --name ia --all
 # conda clean --all
 
 # verfify CUDA

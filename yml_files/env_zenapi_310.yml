@@ -1,0 +1,58 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer: Use at your own risk!
+#
+
+name: zenapi
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - conda
+  - docutils
+  - pip
+  - wheel
+  - setuptools
+  - autopep8
+  - pytest
+  - pooch
+  - requests
+  - tqdm
+
+  - pip:
+
+    - aicsimageio[all]
+    - aicspylibczi
+    - pylibCZIrw
+    - cztile
+    - czitools
+    - matplotlib
+    - ome-zarr
+    - napari[all]
+    - napari-czann-segment
+    - napari-aicsimageio
+    - napari-brightness-contrast
+    - napari-layer-details-display
+    - napari-skimage-regionprops
+    - napari-simpleitk-image-processing
+    - napari-plugin-search
+    - napari-ome-zarr
+    - napari-crop
+    - napari-plugin-search
+    - betterproto
+
+# Create an environment - use conda or mamba
+# conda env create --file env_zenapi_310.yml
+
+# Update an environment
+# conda env update --name zenapi --file env_zenapi_310.yml --prune
+
+# Remove an environment
+# conda remove --name zenapi --all
+# conda clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python
