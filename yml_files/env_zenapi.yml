@@ -9,7 +9,7 @@ channels:
   - nvidia
   - conda-forge
 dependencies:
-  - python=3.10
+  - python=3.11
   - conda
   - docutils
   - pip
@@ -42,12 +42,14 @@ dependencies:
     - napari-crop
     - napari-plugin-search
     - betterproto
+    - --pre betterproto==2.0.0b6
+    - --pre betterproto[compiler]==2.0.0b6
 
 # Create an environment - use conda or mamba
-# conda env create --file env_zenapi_310.yml
+# conda env create --file env_zenapi.yml
 
 # Update an environment
-# conda env update --name zenapi --file env_zenapi_310.yml --prune
+# conda env update --name zenapi --file env_zenapi.yml --prune
 
 # Remove an environment
 # conda remove --name zenapi --all

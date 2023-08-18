@@ -8,8 +8,8 @@ channels:
   - nvidia
 
 dependencies:
-  - python=3.9
-  - conda
+  - python=3.11
+  #- conda
   - docutils
   - pip
   - wheel
@@ -18,9 +18,9 @@ dependencies:
   - nb_conda_kernels
   - pytest
   - numpy
-  - jupyter # might not be needed if inside base env
-  - jupyterlab # might not be needed if inside base env
-  - ipykernel
+  #- jupyter # might not be needed if inside base env
+  #- jupyterlab # might not be needed if inside base env
+  #- ipykernel
   - progressbar2
   - pytorch
   - cudatoolkit=11.6
@@ -31,7 +31,6 @@ dependencies:
   - requests
   - tqdm
   - lxml
-  - pytest
   #- ocl-icd-system # sometime for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available
