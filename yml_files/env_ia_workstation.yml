@@ -92,7 +92,7 @@ dependencies:
 # conda env update --name ia --file env_ia.yml --prune
 
 # Remove an environment
-# yml_files/env_ia.yml
+# conda remove --name ia --all
 # conda clean --all
 
 # verfify CUDA

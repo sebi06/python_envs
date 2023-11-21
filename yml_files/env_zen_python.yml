@@ -1,0 +1,81 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer:
+#
+# Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file. Use at your won risk.
+# By using any of those examples you agree to this disclaimer.
+#
+name: zen
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - conda
+  - docutils
+  - pip
+  - wheel
+  - pytorch
+  - torchvision
+  - pytorch-cuda=11.7
+  - setuptools
+  - autopep8
+  - nb_conda_kernels
+  - pytest
+  - ipyfilechooser
+  - pyopencl
+  - memory_profiler
+  #- ocl-icd-system # sometime for linux users
+  #- oclgrind # for windows if no OpenCL compatible GPU is available
+  #- pocl # for Linux if no OpenCL compatible GPU is available
+
+  - pip:
+      - czmodel[pytorch]>=5
+      - opencv-python
+      - onnxruntime-gpu
+      - opencv-python
+      - aicsimageio
+      - aicspylibczi
+      - fsspec>=2022.8.0
+      - pylibCZIrw
+      - cztile
+      - czitools
+      - ome-zarr
+      - pyclesperanto-prototype
+      - napari[all]
+      - napari-czann-segment
+      - napari-aicsimageio
+      - napari-brightness-contrast
+      - napari-layer-details-display
+      - napari-skimage-regionprops
+      - napari-simpleitk-image-processing
+      - napari-plugin-search
+      - napari-ome-zarr
+      - napari-crop
+      - apeer-dev-kit
+      - matplotlib
+      - tqdm
+      - scikit-image
+      - pooch
+      - requests
+      - betterproto
+      - --pre betterproto==2.0.0b6
+      - --pre betterproto[compiler]==2.0.0b6
+      - pyqtgraph
+      #- dataclass-dict-convert
+
+# Create an environment
+# conda env create --file env_zen_python.yml
+
+# Update an environment
+# conda env update --name zen --file env_zen_python.yml --prune
+
+# Remove an environment
+# conda remove --name zen --all
+# conda clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python
