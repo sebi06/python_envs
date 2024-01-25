@@ -5,7 +5,7 @@
 # Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file. Use at your won risk.
 # By using any of those examples you agree to this disclaimer.
 #
-name: zen
+name: czannseg
 channels:
   - pytorch
   - nvidia
@@ -19,25 +19,19 @@ dependencies:
   - wheel
   - pytorch
   - torchvision
-  - pytorch-cuda=11.7
+  - pytorch-cuda=11.8
+  - cudnn
   - setuptools
   - autopep8
   - nb_conda_kernels
   - pytest
   - ipyfilechooser
-  - ipywidgets
-  - pyopencl
   - memory_profiler
-  - czifile
-  - validators
-  #- ocl-icd-system # sometime for linux users
-  #- oclgrind # for windows if no OpenCL compatible GPU is available
-  #- pocl # for Linux if no OpenCL compatible GPU is available
 
   - pip:
       - czmodel[pytorch]>=5
       - opencv-python
-      - onnxruntime-gpu
+      - onnxruntime-gpu==1.16.3
       - opencv-python
       - aicsimageio
       - aicspylibczi
@@ -46,14 +40,11 @@ dependencies:
       - cztile
       - czitools
       - ome-zarr
-      - pyclesperanto-prototype
       - napari[all]
       - napari-czann-segment
       - napari-aicsimageio
       - napari-brightness-contrast
       - napari-layer-details-display
-      - napari-skimage-regionprops
-      - napari-simpleitk-image-processing
       - napari-plugin-search
       - napari-ome-zarr
       - napari-crop
@@ -63,21 +54,15 @@ dependencies:
       - scikit-image
       - pooch
       - requests
-      #- betterproto
-      - --pre betterproto==2.0.0b6
-      - --pre betterproto[compiler]==2.0.0b6
-      - pyqtgraph
-      - qasync
-      #- dataclass-dict-convert
 
 # Create an environment
-# conda env create --file env_zen_python.yml
+# conda env create --file env_czannseg.yml
 
 # Update an environment
-# conda env update --name zen --file env_zen_python.yml --prune
+# conda env update --name zen --file env_czannseg.yml --prune
 
 # Remove an environment
-# conda remove --name zen --all
+# conda remove --name czannseg --all
 # conda clean --all
 
 # Show the locations of all versions of Python that are currently in the path

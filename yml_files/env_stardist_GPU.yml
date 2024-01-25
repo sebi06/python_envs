@@ -3,24 +3,19 @@ channels:
   - defaults
   - nvidia
 dependencies:
-  - python=3.9
+  - python=3.10
   - pip
-  - cudatoolkit=11
-  - cudnn
+  - cudatoolkit=11.2
+  - cudnn=8.1.0
   - xmltodict
-  - nb_conda_kernels
   - docutils
   - wheel
   - setuptools
   - autopep8
-  - jupyter # might not be needed if inside base env
-  - jupyterlab # might not be needed if inside base env
-  - ipykernel
-  - jupyterlab
-  - nb_conda_kernels
   - pytest
+  - mistune<2.0.0
   - pip:
-    - tensorflow-gpu
+    - tensorflow==2.10
     - csbdeep
     - stardist
     - silence-tensorflow
@@ -41,7 +36,6 @@ dependencies:
     - napari-ome-zarr
     - napari-assistant
     - magicgui
-    - nbvv
     - magic-class
     - matplotlib
     - tqdm
@@ -49,15 +43,15 @@ dependencies:
     - requests
     - ipytree
 
-# mamba env create -f env_stardist_GPU.yml
-# mamba env update --name stardist_gpu --file env_stardist_GPU.yml --prune
+# mamba env create -f stardist_local_GPU.yml
+# mamba env update --name stardist_gpu --file stardist_local_GPU.yml --prune
 
 # verfify CUDA
 # nvcc --version
 # nvidia-smi
 
 # Remove an environment
-# e
+# mamba remove --name stardist_gpu --all
 # mamba clean --all
 
 # Show the locations of all versions of Python that are currently in the path
