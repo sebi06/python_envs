@@ -34,8 +34,8 @@ dependencies:
       - napari-aicsimageio
       - napari-brightness-contrast
       - napari-layer-details-display
-      #- napari-skimage-regionprops
-      #- napari-simpleitk-image-processing
+      - napari-skimage-regionprops
+      - napari-simpleitk-image-processing
       - napari-plugin-search
       - napari-ome-zarr
       #- tifffile>=2023.4.12
