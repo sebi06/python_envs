@@ -1,0 +1,70 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer:
+#
+# Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file. Use at your won risk.
+# By using any of those examples you agree to this disclaimer.
+#
+name: czannseg
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - conda
+  - docutils
+  - pip
+  - wheel
+  - pytorch
+  - torchvision
+  - pytorch-cuda=11.8
+  - cudnn
+  - setuptools
+  - autopep8
+  - nb_conda_kernels
+  - pytest
+  - ipyfilechooser
+  - memory_profiler
+
+  - pip:
+      - czmodel[pytorch]>=5
+      - opencv-python
+      - onnxruntime-gpu==1.16.3
+      - opencv-python
+      - aicsimageio
+      - aicspylibczi
+      - fsspec>=2022.8.0
+      - pylibCZIrw
+      - cztile
+      - czitools
+      - ome-zarr
+      - napari[all]
+      - napari-czann-segment
+      - napari-aicsimageio
+      - napari-brightness-contrast
+      - napari-layer-details-display
+      - napari-plugin-search
+      - napari-ome-zarr
+      - napari-crop
+      - apeer-dev-kit
+      - matplotlib
+      - tqdm
+      - scikit-image
+      - pooch
+      - requests
+
+# Create an environment
+# conda env create --file env_czannseg.yml
+
+# Update an environment
+# conda env update --name zen --file env_czannseg.yml --prune
+
+# Remove an environment
+# conda remove --name czannseg --all
+# conda clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python

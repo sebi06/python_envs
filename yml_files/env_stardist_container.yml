@@ -1,0 +1,44 @@
+name: stardist_gpu
+channels:
+  - defaults
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - cudatoolkit=11.2
+  - cudnn=8.1.0
+  - xmltodict
+  - docutils
+  - wheel
+  - setuptools
+  - pandas
+  - pyarrow
+  - matplotlib
+  - tqdm
+  - pooch
+  - requests
+
+  - pip:
+    - tensorflow==2.10
+    - csbdeep
+    - stardist
+    - silence-tensorflow
+    - scikit-image
+    - pylibCZIrw
+    - czitools>=0.5
+    - apeer-dev-kit
+    - apeer-ometiff-library
+    - aicsimageio[all]
+    - aicspylibczi
+
+# conda env create -f env_stardist_gpu.yml
+# conda env update --name stardist_gpu --file env_stardist_gpu.yml --prune
+
+# Remove an environment
+# conda remove --name stardist_gpu --all
+# conda clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python
