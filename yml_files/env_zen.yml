@@ -1,0 +1,84 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer:
+#
+# Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file. Use at your won risk.
+# By using any of those examples you agree to this disclaimer.
+#
+name: zen
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - conda
+  - mamba
+  - docutils
+  - pip
+  - wheel
+  - pytorch
+  - torchvision
+  - pytorch-cuda=11.7
+  - pyclesperanto-prototype
+  - napari[all]
+  - fsspec
+  - setuptools
+  - nb_conda_kernels
+  - pytest
+  - ipyfilechooser
+  - ipywidgets
+  - pyopencl
+  - memory_profiler
+  - czifile
+  - validators
+  - opencv
+  - ome-zarr
+  - tqdm
+  - pooch
+  - requests
+  - matplotlib
+  - pyqtgraph
+  - qasync
+  #- ocl-icd-system # sometimes for linux users
+  #- oclgrind # for windows if no OpenCL compatible GPU is available
+  #- pocl # for Linux if no OpenCL compatible GPU is available
+
+  - pip:
+      - czmodel[pytorch]>=5
+      #- opencv-python
+      - onnxruntime-gpu
+      - aicsimageio
+      - aicspylibczi
+      - pylibCZIrw
+      - cztile
+      - czitools
+      - napari-czann-segment
+      - napari-aicsimageio
+      - napari-brightness-contrast
+      - napari-layer-details-display
+      - napari-skimage-regionprops
+      - napari-simpleitk-image-processing
+      - napari-plugin-search
+      - napari-ome-zarr
+      - napari-crop
+      - napari-assistant
+      - apeer-dev-kit
+      - scikit-image
+      #- betterproto
+      - --pre betterproto==2.0.0b6
+      - --pre betterproto[compiler]==2.0.0b6
+
+# Create an environment
+# mamba env create --file env_zen.yml
+
+# Update an environment
+# mamba env update --name zen --file env_zen.yml --prune
+
+# Remove an environment
+# mamba remove --name zen --all
+# mamba clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python
