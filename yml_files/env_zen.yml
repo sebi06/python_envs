@@ -41,6 +41,16 @@ dependencies:
   - pyqtgraph
   - qasync
   - numpy
+  - pandas
+  - plotly
+  - colormap
+  - zarr
+  - dask
+  - xmltodict
+  - seaborn
+  - python-dateutil
+  - python-box[all]
+  - scikit-image>=0.19.3
   #- ocl-icd-system # sometimes for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available
