@@ -19,7 +19,7 @@ dependencies:
   - wheel
   - pytorch
   - torchvision
-  - pytorch-cuda=11.7
+  - pytorch-cuda=11.8
   - pyclesperanto-prototype
   - napari[all]
   - fsspec
@@ -40,6 +40,7 @@ dependencies:
   - matplotlib
   - pyqtgraph
   - qasync
+  - numpy
   #- ocl-icd-system # sometimes for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available
