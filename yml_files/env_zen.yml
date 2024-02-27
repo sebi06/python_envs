@@ -51,6 +51,7 @@ dependencies:
   - python-dateutil
   - python-box[all]
   - scikit-image>=0.19.3
+  - mistune<2.0.0
   #- ocl-icd-system # sometimes for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available
@@ -76,6 +77,7 @@ dependencies:
       - napari-assistant
       - apeer-dev-kit
       - scikit-image
+      - grpclib
       #- betterproto
       - --pre betterproto==2.0.0b6
       - --pre betterproto[compiler]==2.0.0b6
