@@ -42,6 +42,7 @@ dependencies:
   - qasync
   - numpy
   - pandas
+  #- pyarrow
   - plotly
   - colormap
   - zarr
@@ -51,7 +52,8 @@ dependencies:
   - python-dateutil
   - python-box[all]
   - scikit-image>=0.19.3
-  - mistune<2.0.0
+  - tifffile
+  - grpclib
   #- ocl-icd-system # sometimes for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available
