@@ -54,6 +54,7 @@ dependencies:
   - scikit-image>=0.19.3
   - tifffile
   - grpclib
+  - marimo
   #- ocl-icd-system # sometimes for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available

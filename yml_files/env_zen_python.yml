@@ -30,6 +30,7 @@ dependencies:
   - memory_profiler
   - czifile
   - validators
+  - marimo
   #- ocl-icd-system # sometime for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available
