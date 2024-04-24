@@ -46,10 +46,10 @@ dependencies:
       - bioio-czi
       - bioio-imageio
       - bioio-ome-tiff
-      - bioio-ome-tiles-tiff
+      - bioio-ome-tiled-tiff
       - bioio-ome-zarr
       - bioio-tifffile
-      - bioio-tifffile-glob
+      - bioio-tiff-glob
       - pylibCZIrw
       - cztile
       - czitools
