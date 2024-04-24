@@ -62,19 +62,18 @@ dependencies:
       - czmodel[pytorch]>=5
       #- opencv-python
       - onnxruntime-gpu
-      #- aicsimageio
-      #- aicspylibczi
-      #- aicsimageio
-      #- aicspylibczi
-      #- fsspec>=2022.8.0
-      - bioio
-      - bioio-czi
-      - bioio-imageio
-      - bioio-ome-tiff
-      - bioio-ome-tiled-tiff
-      - bioio-ome-zarr
-      - bioio-tifffile
-      - bioio-tifffile-glob
+      - aicspylibczi
+      - aicsimageio
+      - aicspylibczi
+      - fsspec>=2022.8.0
+      #- bioio
+      #- bioio-czi
+      #- bioio-imageio
+      #- bioio-ome-tiff
+      #- bioio-ome-tiled-tiff
+      #- bioio-ome-zarr
+      #- bioio-tifffile
+      #- bioio-tiff-glob
       - pylibCZIrw
       - cztile
       - czitools
