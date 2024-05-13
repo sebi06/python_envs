@@ -55,6 +55,8 @@ dependencies:
   - tifffile
   - grpclib
   - marimo
+  - stackview
+  - grpclib
   #- ocl-icd-system # sometimes for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available
@@ -65,8 +67,6 @@ dependencies:
       - onnxruntime-gpu
       - aicspylibczi
       - aicsimageio
-      - aicspylibczi
-      - fsspec>=2022.8.0
       #- bioio
       #- bioio-czi
       #- bioio-imageio
@@ -89,8 +89,6 @@ dependencies:
       - napari-crop
       - napari-assistant
       - apeer-dev-kit
-      - scikit-image
-      - grpclib
       - ryomen
       - tiler
       #- betterproto
