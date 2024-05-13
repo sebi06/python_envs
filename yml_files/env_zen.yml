@@ -29,6 +29,7 @@ dependencies:
   - ipyfilechooser
   - ipywidgets
   - pyopencl
+  - shapely
   - memory_profiler
   - czifile
   - validators
