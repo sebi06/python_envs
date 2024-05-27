@@ -92,6 +92,7 @@ dependencies:
       - apeer-dev-kit
       - ryomen
       - tiler
+      - loguru
       #- betterproto
       - --pre betterproto==2.0.0b6
       - --pre betterproto[compiler]==2.0.0b6
