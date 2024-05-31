@@ -1,0 +1,111 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer:
+#
+# Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file. Use at your won risk.
+# By using any of those examples you agree to this disclaimer.
+#
+# extra steps:
+# sudo apt install build-essential
+# sudo apt install cmake
+# sudo apt install libssl-dev
+# sudo apt install pkg-config
+#
+name: chromeos
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.11
+  - conda
+  - mamba
+  - docutils
+  - pip
+  - wheel
+  - pytorch
+  - torchvision
+  - pyclesperanto-prototype
+  - napari[all]
+  - fsspec
+  - setuptools
+  - nb_conda_kernels
+  - pytest
+  - ipyfilechooser
+  - ipywidgets
+  - pyopencl
+  - shapely
+  - memory_profiler
+  - czifile
+  - validators
+  - opencv
+  - ome-zarr
+  - tqdm
+  - pooch
+  - requests
+  - matplotlib
+  - pyqtgraph
+  - qasync
+  - numpy
+  - pandas
+  - plotly
+  - colormap
+  - zarr
+  - dask
+  - xmltodict
+  - seaborn
+  - python-dateutil
+  - python-box[all]
+  - scikit-image>=0.19.3
+  - tifffile
+  - grpclib
+  - marimo
+  - stackview
+  - grpclib
+  - ocl-icd-system # sometimes for linux users
+  - pocl # for Linux if no OpenCL compatible GPU is available
+
+  - pip:
+      - czmodel[pytorch]>=5
+      #- opencv-python
+      - onnxruntime
+      - aicspylibczi
+      - aicsimageio
+      #- bioio
+      #- bioio-czi
+      #- bioio-imageio
+      #- bioio-ome-tiff
+      #- bioio-ome-tiled-tiff
+      #- bioio-ome-zarr
+      #- bioio-tifffile
+      #- bioio-tiff-glob
+      - pylibCZIrw
+      - cztile
+      - czitools
+      - napari-czann-segment
+      - napari-aicsimageio
+      - napari-brightness-contrast
+      - napari-layer-details-display
+      - napari-skimage-regionprops
+      - napari-simpleitk-image-processing
+      - napari-plugin-search
+      - napari-ome-zarr
+      - napari-crop
+      - napari-assistant
+      - apeer-dev-kit
+      - ryomen
+      - tiler
+      - loguru
+
+# Create an environment
+# mamba env create --file env_chromeos.yml
+
+# Update an environment
+# mamba env update --name chromeos --file env_chromeos.yml --prune
+
+# Remove an environment
+# mamba remove --name chromeos --all
+# mamba clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python
