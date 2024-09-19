@@ -1,0 +1,36 @@
+name: napari-chatgpt
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - wheel
+  - setuptools
+  - matplotlib
+
+  - pip:
+      - napari[all]
+      - napari-chatgpt
+      - napari-aicsimageio
+      - napari-brightness-contrast
+      - napari-layer-details-display
+      - napari-skimage-regionprops
+      - napari-simpleitk-image-processing
+      - napari-plugin-search
+      - napari-ome-zarr
+      - napari-crop
+      - napari-assistant
+
+# Create an environment
+# mamba env create --file env_napari_chatgpt.yml
+
+# Update an environment
+# mamba env update --name napari-chatgpt --file env_napari_chatgpt.yml --prune
+
+# Remove an environment
+# mamba remove --name napari-chatgpt --all
+# mamba clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python
