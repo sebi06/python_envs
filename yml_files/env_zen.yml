@@ -58,6 +58,7 @@ dependencies:
   - marimo
   - stackview
   - grpclib
+  - comtypes
   #- ocl-icd-system # sometimes for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available
