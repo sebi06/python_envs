@@ -19,7 +19,8 @@ dependencies:
   - wheel
   - pytorch
   - torchvision
-  - pytorch-cuda=11.8
+  #- pytorch-cuda=11.8
+  - pytorch-cuda=12.4
   - pyclesperanto-prototype
   - napari[all]
   - fsspec
@@ -59,6 +60,7 @@ dependencies:
   - stackview
   - grpclib
   - comtypes
+  - xarray
   #- ocl-icd-system # sometimes for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available
@@ -69,14 +71,14 @@ dependencies:
       - onnxruntime-gpu
       - aicspylibczi
       - aicsimageio
-      #- bioio
-      #- bioio-czi
-      #- bioio-imageio
-      #- bioio-ome-tiff
-      #- bioio-ome-tiled-tiff
-      #- bioio-ome-zarr
-      #- bioio-tifffile
-      #- bioio-tiff-glob
+      - bioio
+      - bioio-czi
+      - bioio-imageio
+      - bioio-ome-tiff
+      - bioio-ome-tiled-tiff
+      - bioio-ome-zarr
+      - bioio-tifffile
+      - bioio-tiff-glob
       - pylibCZIrw
       - cztile
       - czitools
@@ -95,8 +97,8 @@ dependencies:
       - tiler
       - loguru
       #- betterproto
-      - --pre betterproto==2.0.0b6
-      - --pre betterproto[compiler]==2.0.0b6
+      - --pre betterproto==2.0.0b7
+      - --pre betterproto[compiler]==2.0.0b7
 
 # Create an environment
 # mamba env create --file env_zen.yml
