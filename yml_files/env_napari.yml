@@ -1,11 +1,4 @@
-# Tested on Windows only but should also work for Linux.
-#
-# Disclaimer:
-#
-# Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file. Use at your won risk.
-# By using any of those examples you agree to this disclaimer.
-#
-name: zen
+name: napari
 channels:
   - pytorch
   - nvidia
@@ -21,8 +14,9 @@ dependencies:
   - torchvision
   #- pytorch-cuda=11.8
   - pytorch-cuda=12.4
-  - pyclesperanto-prototype
-  - napari[all]
+  #- pyclesperanto-prototype
+  - pyclesperanto
+  - napari[all]>=0.5.4
   - fsspec
   - setuptools
   - nb_conda_kernels
@@ -53,8 +47,8 @@ dependencies:
   - seaborn
   - python-dateutil
   - python-box[all]
-  - scikit-image>=0.19.3
-  - tifffile
+  - scikit-image!=0.20.0,>=0.18.0
+  - tifffile>=2022.4.22
   - grpclib
   - marimo
   - stackview
@@ -69,15 +63,15 @@ dependencies:
       #- opencv-python
       - onnxruntime-gpu
       - aicspylibczi
-      - aicsimageio
+      #- aicsimageio
       - bioio
       - bioio-czi
       - bioio-imageio
       - bioio-ome-tiff
-      - bioio-ome-tiled-tiff
+      # - bioio-ome-tiled-tiff
       - bioio-ome-zarr
       - bioio-tifffile
-      - bioio-tiff-glob
+      #- bioio-tiff-glob
       - pylibCZIrw
       - cztile
       - czitools
@@ -104,14 +98,14 @@ dependencies:
       - --pre betterproto[compiler]==2.0.0b7
 
 # Create an environment
-# mamba env create --file env_zen.yml
+# conda env create --file env_napari.yml
 
 # Update an environment
-# mamba env update --name zen --file env_zen.yml --prune
+# conda env update --name napari --file env_napari.yml --prune
 
 # Remove an environment
-# mamba remove --name zen --all
-# mamba clean --all
+# conda remove --name napari --all
+# conda clean --all
 
 # Show the locations of all versions of Python that are currently in the path
 # Windows: where python
