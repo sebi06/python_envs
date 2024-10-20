@@ -10,6 +10,7 @@ dependencies:
   - docutils
   - pip
   - wheel
+  - pyqt
   - pytorch
   - torchvision
   #- pytorch-cuda=11.8
