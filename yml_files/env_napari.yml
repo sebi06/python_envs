@@ -5,25 +5,24 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - conda
-  - mamba
   - docutils
   - pip
   - wheel
   - pyqt
+  - qt
   - pytorch
   - torchvision
-  #- pytorch-cuda=11.8
-  - pytorch-cuda=12.4
+  - torch_em >=0.7.0
+  - pytorch >=2.4
+  - pytorch-cuda>=11.7  # you may need to update the cuda version to match your system
+  - segment-anything
   - pyclesperanto-prototype
   - pyclesperanto
-  - napari[all]>=0.5.4
+  - napari[all]>=0.5.0
   - fsspec
   - setuptools
-  - nb_conda_kernels
+  - imagecodecs
   - pytest
-  - ipyfilechooser
-  - ipywidgets
   - pyopencl
   - shapely
   - memory_profiler
@@ -54,6 +53,11 @@ dependencies:
   - marimo
   - stackview
   - xarray
+  - natsort
+  - protobuf <5
+  - python-xxhash
+  - python-elf >=0.4.8
+  - timm
   #- ocl-icd-system # sometimes for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
   #- pocl # for Linux if no OpenCL compatible GPU is available
@@ -96,6 +100,7 @@ dependencies:
       #- betterproto
       - --pre betterproto==2.0.0b7
       - --pre betterproto[compiler]==2.0.0b7
+      - git+https://github.com/ChaoningZhang/MobileSAM.git
 
 # Create an environment
 # conda env create --file env_napari.yml
