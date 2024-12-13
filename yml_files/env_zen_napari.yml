@@ -18,7 +18,7 @@ dependencies:
   - pytorch
   - torchvision
   - pytorch-cuda=12.4
-  - napari[all]
+  - napari[all]>=0.5.4
   - pyqt
   - fsspec
   - setuptools
@@ -79,8 +79,8 @@ dependencies:
       - tiler
       - loguru
       #- betterproto
-      - --pre betterproto==2.0.0b7
-      - --pre betterproto[compiler]==2.0.0b7
+      - --pre betterproto==2.0.0b9
+      - --pre betterproto[compiler]==2.0.0b9
 
 # Create an environment
 # mamba env create --file env_zen_napari.yml

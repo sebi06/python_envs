@@ -2,7 +2,7 @@
 #
 # Disclaimer:
 #
-# Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file. Use at your won risk.
+# The author undertakes no warranty concerning the use of this YML file. Use at your own risk.
 # By using any of those examples you agree to this disclaimer.
 #
 name: zen
@@ -12,8 +12,8 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - conda
-  - mamba
+  #- conda
+  #- mamba
   - docutils
   - pip
   - wheel
@@ -22,7 +22,10 @@ dependencies:
   #- pytorch-cuda=11.8
   - pytorch-cuda=12.4
   - pyclesperanto-prototype
-  - napari[all]
+  - napari[all]>=0.5.4
+  - pyqt
+  #- napari-aicsimageio
+  #- aicsimageio
   - fsspec
   - setuptools
   - nb_conda_kernels
@@ -34,6 +37,8 @@ dependencies:
   - memory_profiler
   - czifile
   - validators
+  - fastapi
+  - flask
   - opencv
   - ome-zarr
   - tqdm
@@ -44,7 +49,6 @@ dependencies:
   - qasync
   - numpy
   - pandas
-  #- pyarrow
   - plotly
   - colormap
   - zarr
@@ -67,17 +71,17 @@ dependencies:
   - pip:
       - czmodel[pytorch]>=5
       #- opencv-python
-      - onnxruntime-gpu
-      - aicspylibczi
-      - aicsimageio
+      - onnxruntime-gpu==1.18.0
+      - aicspylibczi>=3.2.0
+      - aicsimageio>=4.14.0
       - bioio
       - bioio-czi
-      - bioio-imageio
-      - bioio-ome-tiff
-      - bioio-ome-tiled-tiff
-      - bioio-ome-zarr
-      - bioio-tifffile
-      - bioio-tiff-glob
+      #- bioio-imageio
+      #- bioio-ome-tiff
+      #- bioio-ome-tiled-tiff
+      #- bioio-ome-zarr
+      #- bioio-tifffile
+      #- bioio-tiff-glob
       - pylibCZIrw
       - cztile
       - czitools
@@ -100,8 +104,8 @@ dependencies:
       - tiler
       - loguru
       #- betterproto
-      - --pre betterproto==2.0.0b7
-      - --pre betterproto[compiler]==2.0.0b7
+      - --pre betterproto==2.0.0b9
+      - --pre betterproto[compiler]==2.0.0b9
 
 # Create an environment
 # mamba env create --file env_zen.yml
