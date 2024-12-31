@@ -64,6 +64,7 @@ dependencies:
   - anywidget
   - stackview
   - comtypes
+  - statsmodels
   - xarray
   #- ocl-icd-system # sometimes for linux users
   #- oclgrind # for windows if no OpenCL compatible GPU is available
