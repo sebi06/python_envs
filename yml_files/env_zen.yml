@@ -61,6 +61,7 @@ dependencies:
   - tifffile
   - grpclib
   - marimo
+  - anywidget
   - stackview
   - comtypes
   - xarray
@@ -103,6 +104,8 @@ dependencies:
       - ryomen
       - tiler
       - loguru
+      - mowidget
+      - wigglystuff
       #- betterproto
       - --pre betterproto==2.0.0b7
       - --pre betterproto[compiler]==2.0.0b7
