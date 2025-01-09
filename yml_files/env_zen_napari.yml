@@ -74,6 +74,10 @@ dependencies:
       - napari-ome-zarr
       - napari-crop
       - napari-assistant
+      - napari-ndev
+      - napari-ndev[extras]
+      - napari-ndev[all]
+      - napari-ndev[gpl-extras]
       - apeer-dev-kit
       - ryomen
       - tiler
