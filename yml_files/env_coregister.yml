@@ -1,0 +1,75 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer:
+#
+# The author undertakes no warranty concerning the use of this YML file. Use at your own risk.
+# By using any of those examples you agree to this disclaimer.
+#
+name: coregister
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - fsspec
+  - wheel
+  - setuptools
+  - pytest
+  - pytest-cov
+  - ruff
+  - mypy
+  - pre-commit
+  - networkx>=2.4
+  - czifile
+  - validators
+  - fastapi
+  - uvicorn
+  - flask
+  - tqdm
+  - progressbar2
+  - requests
+  - scipy>=1.4.1
+  - matplotlib
+  - numpy>=1.18.1
+  - pyjnius>=1.2.1
+  - pandas
+  - colormap
+  - httpx
+  - zarr
+  - tifffile>=2023.3.15
+  - zarr>=2.11.3
+  - blessed>=1.17
+  - dask
+  - xmltodict
+  - seaborn
+  - python-dateutil
+  - python-box[all]
+  - scikit-image>=0.19.3
+  - scikit-learn>=0.21.1
+  - grpclib
+  - docker-py
+  - conda-build
+  - sphinx
+  - zeiss-sphinx-theme
+  - types-tqdm
+  - loguru
+  - pip:
+      - aicspylibczi>=3.2.0
+      - pylibCZIrw
+      - cztile
+      - czitools
+      - tqdm-loggable
+
+# Create an environment
+# conda env create --file env_coregister.yml
+
+# Update an environment
+# conda env update --name coregister --file env_coregister.yml --prune
+
+# Remove an environment
+# conda remove --name coregister --all
+# conda clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python
