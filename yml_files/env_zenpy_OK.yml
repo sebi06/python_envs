@@ -62,7 +62,6 @@ dependencies:
   - xarray
   - xarray[complete]
   - xmltodict
-  - zarr
   #- zeiss-sphinx-theme
   # Pip packages
   - pip:
@@ -75,18 +74,22 @@ dependencies:
       - bioio-ome-zarr
       - czmodel[pytorch]>=5
       - cztile
-      - czitools
+  #     - czitools
       - loguru
       - mowidget
-      - napari-assistant
-      - napari-brightness-contrast
-      - napari-crop
-      - napari-czann-segment
-      - napari-layer-details-display
-      - napari-ome-zarr
-      - napari-plugin-search
-      - napari-simpleitk-image-processing
-      - napari-skimage-regionprops
+  #     - napari-assistant
+  #     - napari-brightness-contrast
+  #     - napari-crop
+  #     - napari-czann-segment
+  #     - napari-layer-details-display
+  #     - napari-ndev
+  #     - napari-ndev[all]
+  #     - napari-ndev[extras]
+  #     - napari-ndev[gpl-extras]
+  #     - napari-ome-zarr
+  #     - napari-plugin-search
+  #     - napari-simpleitk-image-processing
+  #     - napari-skimage-regionprops
       - ngff-zarr
       - ngio
       - onnxruntime-gpu==1.19.0
