@@ -66,8 +66,8 @@ dependencies:
   #- zeiss-sphinx-theme
   # Pip packages
   - pip:
-      - --pre betterproto==2.0.0b7
-      - --pre betterproto[compiler]==2.0.0b7
+      - --pre betterproto==2.0.0b7 # sometimes this does not get installed - try mannually
+      - --pre betterproto[compiler]==2.0.0b7 # sometimes this does not get installed - try mannually
       - aicspylibczi>=3.2.1
       - apeer-dev-kit
       - bioio
