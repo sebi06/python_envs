@@ -1,7 +1,9 @@
 # Tested on Windows only but should also work for Linux.
 #
-# Disclaimer: Use at your own risk!
+# Disclaimer:
 #
+# Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file. Use at your won risk.
+# By using any of those examples you agree to this disclaimer.
 
 name: zenapi
 channels:
@@ -10,40 +12,50 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - conda
   - docutils
   - pip
   - wheel
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.4
+  - fsspec
   - setuptools
-  - autopep8
+  - nb_conda_kernels
   - pytest
+  - ipyfilechooser
+  - ipywidgets
+  - shapely
+  - czifile
+  - validators
+  - ome-zarr
+  - tqdm
   - pooch
   - requests
-  - tqdm
+  - matplotlib
+  - pyqtgraph
+  - qasync
+  - numpy
+  - pandas
+  - plotly
+  - colormap
+  - zarr
+  - dask
+  - xmltodict
+  - seaborn
+  - python-dateutil
+  - python-box[all]
+  - scikit-image>=0.19.3
+  - grpclib
 
   - pip:
-
-    - aicsimageio[all]
-    - aicspylibczi
-    - pylibCZIrw
-    - cztile
-    - czitools
-    - matplotlib
-    - ome-zarr
-    - napari[all]
-    - napari-czann-segment
-    - napari-aicsimageio
-    - napari-brightness-contrast
-    - napari-layer-details-display
-    - napari-skimage-regionprops
-    - napari-simpleitk-image-processing
-    - napari-plugin-search
-    - napari-ome-zarr
-    - napari-crop
-    - betterproto
-    - --pre betterproto==2.0.0b6
-    - --pre betterproto[compiler]==2.0.0b6
-    - pyqtgraph
+      - czmodel[pytorch]>=5
+      - onnxruntime-gpu=1.19.0 # needs to match CUDA etc.
+      - aicsimageio
+      - aicspylibczi
+      - pylibCZIrw
+      - czitools
+      - --pre betterproto==2.0.0b7 # sometimes this does not get installed - try manually
+      - --pre betterproto[compiler]==2.0.0b7 # sometimes this does not get installed - try manually
 
 # Create an environment - use conda or mamba
 # conda env create --file env_zenapi.yml
