@@ -16,6 +16,7 @@ dependencies:
   #- mamba
   - docutils
   - pip
+  - pipask
   - wheel
   - pytorch
   - torchvision

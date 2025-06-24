@@ -2,27 +2,20 @@
 
 name: czmodel
 channels:
-  - defaults
+  - conda-forge
 dependencies:
-  - python=3.9
-  - conda
+  - python=3.12
   - pip
-  - matplotlib
-  - nb_conda
-  - nb_conda_kernels
-  - jupyter # might not be needed if inside base env
-  - jupyterlab # might not be needed if inside base env
-  - ipykernel
-  - cudatoolkit=11
-  - cudnn
-  - scikit-learn
-  - xmltodict
-  - tqdm
-
+  - numpy<2
+  - pytest
+  - setuptools
   - pip:
-      - czmodel
-      - livelossplot
-      - onnxruntime-gpu
+  #    - "git+https://github.com/onnx/tensorflow-onnx.git#egg=tf2onnx"
+      - onnx
+      - numpy<2
+      - xmltodict
+      - defusedxml
+      - torch
 
 # Create an environment
 # conda env create --file env_czmodel.yml
