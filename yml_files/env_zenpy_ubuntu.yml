@@ -1,0 +1,111 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer:
+#
+# The author undertakes no warranty concerning the use of this YML file. Use at your own risk.
+# By using any of those examples you agree to this disclaimer.
+#
+name: zenpy
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - anywidget
+  - conda-build
+  - czifile
+  - dask
+  - docutils
+  - docker-py
+  - fastapi
+  - flask
+  - fsspec
+  - grpclib
+  - ipyfilechooser
+  - ipywidgets
+  - matplotlib
+  - marimo
+  - memory_profiler
+  - mypy
+  - nb_conda_kernels
+  - napari>=0.5.6
+  - numpy<2
+  - ocl-icd-system
+  - opencv
+  - ome-zarr
+  - pandas
+  - pip
+  - plotly
+  - pyclesperanto
+  - pyclesperanto-prototype
+  - pyopencl
+  - pyqt
+  - pyqtgraph
+  - python-box[all]
+  - python-dateutil
+  - pytorch
+  - pytorch-cuda=12.4
+  - pytest
+  - pytest-cov
+  - qasync
+  - requests
+  - ruff
+  - seaborn
+  - setuptools
+  - sphinx
+  - stackview
+  - statsmodels
+  - tifffile
+  - tqdm
+  - types-tqdm
+  - validators
+  - wheel
+  - xarray
+  - xarray[complete]
+  - xmltodict
+  - zarr
+  # Pip packages
+  - pip:
+      - --pre betterproto==2.0.0b7
+      - --pre betterproto[compiler]==2.0.0b7
+      - aicspylibczi>=3.2.1
+      - apeer-dev-kit
+      - bioio
+      - bioio-czi
+      - bioio-ome-zarr
+      - czmodel[pytorch]>=5
+      - cztile
+      - czitools
+      - loguru
+      - mowidget
+      - napari-assistant
+      - napari-brightness-contrast
+      - napari-crop
+      - napari-czann-segment
+      - napari-layer-details-display
+      - napari-ome-zarr
+      - napari-plugin-search
+      - napari-simpleitk-image-processing
+      - napari-skimage-regionprops
+      - ngff-zarr
+      - ngio
+      - onnxruntime-gpu==1.19.0
+      - pylibCZIrw
+      - ryomen
+      - tiler
+      - wigglystuff
+
+# Create an environment
+# mamba env create --file env_zenpy.yml
+
+# Update an environment
+# mamba env update --name zenpy --file env_zenpy.yml --prune
+
+# Remove an environment
+# mamba remove --name zenpy --all
+# mamba clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux: which -a python

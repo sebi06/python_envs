@@ -1,0 +1,75 @@
+# run: conda env create --file ubuntu_env_napari.yml
+name: napari
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - conda
+  - docutils
+  - pip
+  - wheel
+  - cudatoolkit=11
+  - cudnn
+  - pyopencl
+  - cupy
+  - setuptools
+  - autopep8
+  - nb_conda_kernels
+  - jupyterlab
+  - jupyterlab_widgets
+  - ipywidgets
+  - ipyfilechooser
+  # - nodejs
+  - stackview
+  - hdbscan
+  - ocl-icd-system
+
+  - pip:
+      - czmodel
+      - cztile
+      - czitools
+      - livelossplot
+      - napari[all]
+      - aicsimageio[all]
+      - napari_czann_segment
+      - napari-aicsimageio
+      - pyclesperanto-prototype
+      - napari-pyclesperanto-assistant
+      - napari-cupy-image-processing
+      - napari-aicsimageio
+      - napari-brightness-contrast
+      - napari-accelerated-pixel-and-object-classification
+      - napari-layer-details-display
+      - napari-skimage-regionprops
+      - napari-simpleitk-image-processing
+      - napari-crop
+      - napari-spreadsheet
+      - napari-ome-zarr
+      - napari-plugin-search
+      - magicgui
+      - magic-class
+      - apeer-dev-kit
+      - apeer-ometiff-library
+      - seaborn
+      - onnxruntime
+      - aicspylibczi
+      - dask
+      - dask-image
+      - zarr
+      - ome-zarr
+      - tifffile
+
+# Create an environment
+# mamba env create --file ubuntu_env_napari.yml
+
+# Update an environment
+# mamba env update --name napari --file ubuntu_env_napari.yml --prune
+
+# Remove an environment
+# mamba remove --name napari --all
+# mamba clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux which -a python
