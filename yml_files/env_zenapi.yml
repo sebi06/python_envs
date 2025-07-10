@@ -5,7 +5,7 @@
 # Carl Zeiss Microscopy GmbH's ZEN software undertakes no warranty concerning the use of this YML file. Use at your won risk.
 # By using any of those examples you agree to this disclaimer.
 
-name: zenapi_adv
+name: zenapi
 channels:
   - pytorch
   - nvidia
@@ -22,13 +22,8 @@ dependencies:
   - setuptools
   - nb_conda_kernels
   - pytest
-  - ipyfilechooser
-  - ipywidgets
   - shapely
-  - czifile
   - validators
-  - ome-zarr
-  - tqdm
   - pooch
   - requests
   - matplotlib
@@ -38,9 +33,6 @@ dependencies:
   - pandas
   - plotly
   - colormap
-  - zarr
-  - dask
-  - xmltodict
   - seaborn
   - python-dateutil
   - python-box[all]
@@ -50,7 +42,8 @@ dependencies:
   - pip:
       - czmodel[pytorch]>=5
       - onnxruntime-gpu=1.19.0 # needs to match CUDA etc.
-      - aicsimageio
+      - bioio
+      - bioio-czi
       - aicspylibczi
       - pylibCZIrw
       - czitools
@@ -58,13 +51,13 @@ dependencies:
       - --pre betterproto[compiler]==2.0.0b7 # sometimes this does not get installed - try manually
 
 # Create an environment - use conda or mamba
-# conda env create --file env_zenapi_adv.yml
+# conda env create --file env_zenapi.yml
 
 # Update an environment
-# conda env update --name zenapi_adv --file env_zenapi_adv.yml --prune
+# conda env update --name zenapi --file env_zenapi.yml --prune
 
 # Remove an environment
-# conda remove --name zenapi_adv --all
+# conda remove --name zenapi --all
 # conda clean --all
 
 # Show the locations of all versions of Python that are currently in the path
