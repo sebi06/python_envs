@@ -27,9 +27,10 @@ dependencies:
   - pooch
   - requests
   - matplotlib
+  - pyqt=5
   - pyqtgraph
   - qasync
-  - numpy
+  - numpy<2
   - pandas
   - plotly
   - colormap
@@ -41,7 +42,7 @@ dependencies:
 
   - pip:
       - czmodel[pytorch]>=5
-      - onnxruntime-gpu=1.19.0 # needs to match CUDA etc.
+      - onnxruntime-gpu==1.19.0 # needs to match CUDA etc.
       - bioio
       - bioio-czi
       - aicspylibczi
