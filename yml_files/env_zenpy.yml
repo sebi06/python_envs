@@ -65,8 +65,8 @@ dependencies:
   #- zeiss-sphinx-theme
   # Pip packages
   - pip:
-      - --pre betterproto==2.0.0b7 # sometimes this does not get installed - try manually
-      - --pre betterproto[compiler]==2.0.0b7 # sometimes this does not get installed - try manually
+      - betterproto==2.0.0b7 # sometimes this does not get installed - try manually
+      - betterproto[compiler]==2.0.0b7 # sometimes this does not get installed - try manually
       - aicspylibczi>=3.3.1
       - apeer-dev-kit
       - bioio
@@ -87,7 +87,7 @@ dependencies:
       - napari-plugin-search
       - napari-simpleitk-image-processing
       - napari-skimage-regionprops
-      #- ngff-zarr
+      - ngff-zarr
       #- ngio
       - onnxruntime-gpu==1.19.0
       - pylibCZIrw
