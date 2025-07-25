@@ -31,12 +31,13 @@ dependencies:
   - nb_conda_kernels
   - napari>=0.6.2
   - numpy<2
-  - opencv
+  #- opencv
   - pandas
   - pip
   - plotly
-  - pyclesperanto
-  - pyopencl
+  #- pyclesperanto
+  #- pyopencl
+  - superqt
   - pyqt=5
   - pyqtgraph
   - python-box[all]
@@ -88,6 +89,8 @@ dependencies:
       - napari-simpleitk-image-processing
       - napari-skimage-regionprops
       - ngff-zarr
+      - ngff-zarr[validate]
+      - ngff-zarr[dask-image]
       #- ngio
       - onnxruntime-gpu==1.19.0
       - pylibCZIrw
