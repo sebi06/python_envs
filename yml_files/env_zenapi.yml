@@ -22,25 +22,18 @@ dependencies:
   - setuptools
   - nb_conda_kernels
   - pytest
-  - ipyfilechooser
-  - ipywidgets
   - shapely
-  - czifile
   - validators
-  - ome-zarr
-  - tqdm
   - pooch
   - requests
   - matplotlib
+  - pyqt=5
   - pyqtgraph
   - qasync
-  - numpy
+  - numpy<2
   - pandas
   - plotly
   - colormap
-  - zarr
-  - dask
-  - xmltodict
   - seaborn
   - python-dateutil
   - python-box[all]
@@ -49,8 +42,9 @@ dependencies:
 
   - pip:
       - czmodel[pytorch]>=5
-      - onnxruntime-gpu=1.19.0 # needs to match CUDA etc.
-      - aicsimageio
+      - onnxruntime-gpu==1.19.0 # needs to match CUDA etc.
+      - bioio
+      - bioio-czi
       - aicspylibczi
       - pylibCZIrw
       - czitools

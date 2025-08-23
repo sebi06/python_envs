@@ -1,0 +1,43 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer:
+#
+# The author undertakes no warranty concerning the use of this YML file. Use at your own risk.
+# By using any of those examples you agree to this disclaimer.
+#
+name: cztile
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - docutils
+  - mypy
+  - numpy
+  - pip
+  - pytest
+  - pytest-cov
+  - ruff
+  - setuptools
+  - tqdm
+  - validators
+  - wheel
+  # Pip packages
+  - pip:
+      - loguru
+      - pylibCZIrw
+      - ryomen
+      - tiler
+
+# Create an environment
+# conda env create --file env_cztile.yml
+
+# Update an environment
+# conda env update --name cztile --file env_cztile.yml --prune
+
+# Remove an environment
+# conda remove --name cztile --all
+# conda clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux: which -a python

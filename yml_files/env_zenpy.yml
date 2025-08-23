@@ -29,16 +29,16 @@ dependencies:
   - memory_profiler
   - mypy
   - nb_conda_kernels
-  - napari>=0.5.6
+  - napari>=0.6.2
   - numpy<2
-  - opencv
-  - ome-zarr
+  #- opencv
   - pandas
   - pip
   - plotly
-  - pyclesperanto
-  - pyopencl
-  - pyqt
+  #- pyclesperanto
+  #- pyopencl
+  - superqt
+  - pyqt=5
   - pyqtgraph
   - python-box[all]
   - python-dateutil
@@ -54,7 +54,7 @@ dependencies:
   - sphinx
   - stackview
   - statsmodels
-  - tifffile
+  # - tifffile
   - tqdm
   - types-tqdm
   - validators
@@ -66,9 +66,9 @@ dependencies:
   #- zeiss-sphinx-theme
   # Pip packages
   - pip:
-      - --pre betterproto==2.0.0b7 # sometimes this does not get installed - try manually
-      - --pre betterproto[compiler]==2.0.0b7 # sometimes this does not get installed - try manually
-      - aicspylibczi>=3.2.1
+      - betterproto==2.0.0b7 # sometimes this does not get installed - try manually
+      - betterproto[compiler]==2.0.0b7 # sometimes this does not get installed - try manually
+      - aicspylibczi>=3.3.1
       - apeer-dev-kit
       - bioio
       - bioio-czi
@@ -83,12 +83,15 @@ dependencies:
       - napari-crop
       - napari-czann-segment
       - napari-layer-details-display
-      - napari-ome-zarr
+      #- napari-ome-zarr
+      - napari-clusters-plotter
       - napari-plugin-search
       - napari-simpleitk-image-processing
       - napari-skimage-regionprops
       - ngff-zarr
-      - ngio
+      - ngff-zarr[validate]
+      - ngff-zarr[dask-image]
+      #- ngio
       - onnxruntime-gpu==1.19.0
       - pylibCZIrw
       - ryomen

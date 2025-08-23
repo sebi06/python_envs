@@ -1,0 +1,63 @@
+# Tested on Windows only but should also work for Linux.
+#
+# Disclaimer:
+#
+# The author undertakes no warranty concerning the use of this YML file. Use at your own risk.
+# By using any of those examples you agree to this disclaimer.
+#
+name: microsim
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - annotated-types>=0.7.0
+  - anywidget
+  - boto3>=1.32
+  - imageio>=2.22
+  - marimo
+  - mypy
+  - numpy<2
+  - pint>=0.23
+  - pip
+  - platformdirs>=4.3.6
+  - pydantic>=2.8
+  - pydantic-settings>2.5.0
+  - pyqt
+  - ruff
+  - s3fs>=0.4.2
+  - scipy>=1.15.2
+  - stackview
+  - supabase>=2.13.0
+  - tqdm>=4.67.1
+  - xarray>=2024.1.0
+  - xarray-datatree>=0.0.14
+  - zarr >=2.17,<3.0
+  # Pip packages
+  - pip:
+      - microsim
+      - microsim[cosem]
+      - microsim[view]
+      - microsim[io]
+      - czitools
+      - loguru
+      - mowidget
+      - napari>=0.6.0
+      - napari-brightness-contrast
+      - napari-layer-details-display
+      - napari-plugin-search
+      - wigglystuff
+
+
+# Create an environment
+# mamba env create --file env_microsim.yml
+
+# Update an environment
+# mamba env update --name microsim --file env_microsim.yml --prune
+
+# Remove an environment
+# mamba remove --name microsim --all
+# mamba clean --all
+
+# Show the locations of all versions of Python that are currently in the path
+# Windows: where python
+# Linux: which -a python
