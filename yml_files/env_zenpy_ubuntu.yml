@@ -8,12 +8,12 @@
 name: zenpy
 channels:
   - pytorch
-  - nvidia
+  #- nvidia
   - conda-forge
 dependencies:
   - python=3.11
   - anywidget
-  - conda-build
+  #- conda-build
   - czifile
   - dask
   - docutils
@@ -29,11 +29,11 @@ dependencies:
   - memory_profiler
   - mypy
   - nb_conda_kernels
-  - napari>=0.5.6
+  - napari>=0.6.2
   - numpy<2
   - ocl-icd-system
   - opencv
-  - ome-zarr
+  #- ome-zarr
   - pandas
   - pip
   - plotly
@@ -69,7 +69,7 @@ dependencies:
   - pip:
       - --pre betterproto==2.0.0b7
       - --pre betterproto[compiler]==2.0.0b7
-      - aicspylibczi>=3.2.1
+      - aicspylibczi>=3.3.1
       - apeer-dev-kit
       - bioio
       - bioio-czi
@@ -88,8 +88,9 @@ dependencies:
       - napari-plugin-search
       - napari-simpleitk-image-processing
       - napari-skimage-regionprops
-      - ngff-zarr
-      - ngio
+      - napari-clusters-plotter
+      #- ngff-zarr
+      #- ngio
       - onnxruntime-gpu==1.19.0
       - pylibCZIrw
       - ryomen
@@ -97,10 +98,10 @@ dependencies:
       - wigglystuff
 
 # Create an environment
-# mamba env create --file env_zenpy.yml
+# mamba env create --file env_zenpy_ubuntu.yml
 
 # Update an environment
-# mamba env update --name zenpy --file env_zenpy.yml --prune
+# mamba env update --name zenpy --file env_zenpy_ubuntu.yml --prune
 
 # Remove an environment
 # mamba remove --name zenpy --all
