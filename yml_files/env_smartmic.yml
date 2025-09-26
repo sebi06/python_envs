@@ -2,97 +2,89 @@
 #
 # Disclaimer:
 #
-# The author(s) undertakes no warranty concerning the use of this YML file. Use at your won risk.
+# The author(s) undertakes no warranty concerning the use of this YML file. Use at your own risk.
 # By using any of those examples you agree to this disclaimer.
 
-name: zen_careamics
+name: smartmic
 channels:
   - pytorch
   - nvidia
   - conda-forge
 dependencies:
   - python=3.11
-  - anywidget
-  - conda-build
+  - colormap
   - czifile
   - dask
-  - docutils
+  - dask-image
   - docker-py
+  - docutils
   - fastapi
   - flask
   - fsspec
-  - grpclib
-  - ipyfilechooser
-  - ipywidgets
-  - matplotlib<=3.10.1
+  - ipykernel
+  - magicgui
   - marimo
-  - memory_profiler
-  - mypy
-  - nb_conda_kernels
-  - napari>=0.6.0
-  - numpy<2
-  - opencv
+  - matplotlib
+  - napari>=0.6.4
+  - numpy
   - ome-zarr
   - pandas
   - pip
   - plotly
-  - psutil<=7.0.0
-  - pydantic<2.11
-  - pytorch-lightning<=2.5.0
-  - pyclesperanto
-  - pyopencl
-  - pyqt
+  - pooch
+  - pyqt=5
   - pyqtgraph
-  - python-box[all]
-  - python-dateutil
-  - pytorch<=2.6.0
-  - pytorch-cuda=12.4
   - pytest
   - pytest-cov
+  - pytorch
+  - pytorch-cuda=12.4
+  - python-box[all]
+  - python-dateutil
   - qasync
   - requests
-  - ruff
+  - scikit-image>=0.19.3
   - seaborn
   - setuptools
-  - sphinx
-  - stackview
-  - statsmodels
-  - tifffile<=2025.3.13
-  - torchvision<=0.21.0
+  - shapely
+  - superqt
+  - torchvision
   - tqdm
-  - types-tqdm
   - validators
   - wheel
-  - xarray<2025.3.0
+  - xarray
+  - xarray[complete]
   - xmltodict
-  - zarr<3.0.0
-  # Pip packages
+  - zarr
+
   - pip:
-      - --pre betterproto==2.0.0b7 # sometimes this does not get installed - try manually
-      - --pre betterproto[compiler]==2.0.0b7 # sometimes this does not get installed - try manually
-      - aicspylibczi>=3.2.1
-      - apeer-dev-kit
+      - aicspylibczi>=3.3.1
+      - betterproto==2.0.0b7 # sometimes this does not get installed - try manually
+      - betterproto[compiler]==2.0.0b7 # sometimes this does not get installed - try manually
       - bioio
       - bioio-czi
+      - bioio-imageio
+      - bioio-ome-tiff
       - bioio-ome-zarr
-      - careamics
-      - careamics-napari
       - czmodel[pytorch]>=5
       - cztile
       - czitools
+      - grpclib
       - loguru
       - mowidget
       - napari-assistant
       - napari-brightness-contrast
+      - napari-clusters-plotter
       - napari-crop
       - napari-czann-segment
+      - napari-czitools
       - napari-layer-details-display
       - napari-ome-zarr
       - napari-plugin-search
       - napari-simpleitk-image-processing
       - napari-skimage-regionprops
       - ngff-zarr
-      - ngio
+      - ngff-zarr[dask-image]
+      - ngff-zarr[validate]
       - onnxruntime-gpu==1.19.0
       - pylibCZIrw
       - ryomen
@@ -100,18 +92,14 @@ dependencies:
       - wigglystuff
 
 # Create an environment - use conda or mamba
-# conda env create --file env_zen_careamics.yml
+# conda env create --file env_smartmic.yml
 
 # Update an environment
-# conda env update --name zen_careamics --file env_zen_careamics.yml --prune
+# conda env update --name smartmic --file env_smartmic.yml --prune
 
 # Remove an environment
-# conda remove --name zen_careamics --all
+# conda remove --name smartmic --all
 # conda clean --all
-
-# verfify CUDA
-# nvcc --version
-# nvidia-smi
 
 # Show the locations of all versions of Python that are currently in the path
 # Windows: where python
